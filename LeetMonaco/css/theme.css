@@ -1,0 +1,97 @@
+html.dark .monaco-editor,
+html.dark .monaco-editor-background,
+html.dark .monaco-editor .margin {
+  background: #1a1a1a !important;
+}
+html.dark .monaco-editor {
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+html.dark .monaco-editor .view-lines {
+  color: #abb2bf !important;
+
+  font-family: "Geist Mono", monospace !important;
+
+  font-weight: normal !important;
+
+  line-height: 12px !important;
+  letter-spacing: 0.15px !important;
+
+  font-variant-ligatures: contextual !important;
+}
+
+html.dark .monaco-editor .line-numbers {
+  color: #3f4451 !important;
+}
+
+html.dark .monaco-editor .current-line {
+  background: rgba(255, 255, 255, 0.025) !important;
+  border: none !important;
+}
+
+html.dark .monaco-editor .selected-text {
+  background: rgba(82, 139, 255, 0.16) !important;
+}
+
+html.dark .monaco-editor .cursor {
+  background: #f2f2f2 !important;
+}
+
+html.dark .monaco-editor .cigr {
+  border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+html.dark .monaco-editor .bracket-match {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+html.dark .monaco-editor .mtk1 {
+  color: #f2f2f2 !important;
+}
+
+html.dark .monaco-editor .mtk10 {
+  color: #e06c75 !important;
+}
+
+html.dark .monaco-editor .mtk14 {
+  color: #e06c75 !important;
+}
+
+html.dark .monaco-editor .mtk3 {
+  color: #5c6370 !important;
+  font-style: italic !important;
+}
+
+html.dark .monaco-editor .mtk5 {
+  color: #c678dd !important;
+}
+
+html.dark .monaco-editor .mtk6 {
+  color: #98c379 !important;
+}
+
+html.dark .monaco-editor .mtk7 {
+  color: #c678dd !important;
+}
+
+html.dark .monaco-editor .mtk8 {
+  color: #d19a66 !important;
+}
+
+html.dark .monaco-editor .mtk9 {
+  color: #e5c07b !important;
+}
+
+html.dark .monaco-editor .mtk10 {
+  color: #e6c07b !important;
+}
+
+html.dark .monaco-editor .mtk11 {
+  color: #f2f2f2 !important;
+}
+
+html.dark .monaco-editor .mtk12 {
+  color: #c792ea !important;
+}

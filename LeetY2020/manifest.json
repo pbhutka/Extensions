@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Leet Y2020",
+  "version": "1.0",
+  "description": "pbhutka",
+  "icons": {
+    "16": "icons/image16.png",
+    "32": "icons/image32.png",
+    "48": "icons/image48.png",
+    "128": "icons/image128.png"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "css": ["css/layout.css"],
+      "js": ["content/content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
+
