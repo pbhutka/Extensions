@@ -1,0 +1,694 @@
+:root {
+  --cf-bg-main: #1e1e1e;
+  --cf-bg-secondary: #2e2e2e;
+  --cf-bg-input: #383838;
+  --cf-bg-highlight: #13203a;
+  --cf-bg-darker: #111;
+  --cf-bg-lighter: #4f4f4f;
+  --cf-bg-test-line: rgb(26, 26, 26);
+  --cf-bg-panel: #585858;
+
+  --cf-text-main: rgb(200, 200, 200);
+  --cf-text-white: #ffffff;
+  --cf-text-muted: #a8a8a8;
+  --cf-text-dim: #bababa;
+  --cf-text-dark: #000000;
+
+  --cf-accent-blue: #21b0fd;
+  --cf-accent-blue-visited: #8ab1ff;
+  --cf-accent-red: hsl(0, 100%, 64%);
+  --cf-accent-green: #00c700;
+  --cf-accent-blue-dark: #014486;
+  --cf-accent-blue-bright: #4e9fef;
+
+  --cf-border-color: #999;
+  --cf-border-dark: #000;
+}
+
+body:not(.wysiwyg),
+.roundbox,
+.bottom-links,
+.datatable td:not(.dark),
+.datatable td:not(.dark) div.dark,
+.datatable th,
+.datatable > div.dark,
+#facebox .content,
+.talk-content div[id^="history-text-content"] {
+  background: var(--cf-bg-main) !important;
+  background-color: var(--cf-bg-main) !important;
+}
+
+.spoiler-content,
+.roundbox.highlight-blue {
+  background-color: hsl(240, 15%, 35%) !important;
+}
+
+.topic .content {
+  border-left-color: var(--cf-border-color) !important;
+}
+
+.comment-table {
+  border-color: var(--cf-text-muted) !important;
+}
+
+div.ttypography .bordertable thead th:not(:last-child) {
+  border-right-color: var(--cf-border-dark);
+}
+
+.search,
+.ac_input,
+input[name$="Difficulty"],
+input[type="text"],
+#title,
+#comment {
+  background-color: var(--cf-bg-input) !important;
+  border-color: var(--cf-bg-input) !important;
+  color: var(--cf-text-main) !important;
+}
+
+td.dark,
+td.dark div.dark,
+.ttypography tbody tr:hover td,
+.status-frame-datatable tr td.dark {
+  background-color: var(--cf-bg-secondary) !important;
+}
+
+div.ttypography tbody tr:hover th {
+  color: var(--cf-text-dark) !important;
+  border-color: var(--cf-text-dark) !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header > div:first-child img,
+._logo_div img,
+.sidebox img[alt="Logo"] {
+  background-color: white !important;
+}
+
+#header > div:first-child a[href="/"] img[alt="Codeforces"] {
+  background-color: transparent !important;
+  content: url("/images/codeforces-logo-dark.png") !important;
+}
+img[src^="//st.codeforces.com"]:not(.ajax-loading-gif),
+img[src^="//sta.codeforces.com"]:not(.ajax-loading-gif),
+img[src$="/lightning-16x16.png"],
+img[src$="/ok-16x16.png"] {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+pre {
+  background-color: var(--cf-bg-darker) !important;
+}
+
+body > pre,
+div.ttypography pre {
+  color: var(--cf-text-main) !important;
+}
+
+.comment-table.highlight-blue,
+.comment-table.highlight,
+.standings tr.highlighted-row td,
+table tr.highlighted-row td,
+.highlight-blue,
+.lang-chooser div[style^="background-color: #EAF4FF;"] {
+  background-color: var(--cf-bg-highlight) !important;
+}
+
+.standings .cell-accepted,
+.standings .cell-accepted-locked {
+  color: rgb(78, 209, 253) !important;
+}
+
+.standings .cell-challenged {
+  color: var(--cf-accent-red) !important;
+}
+
+.standings .cell-passed-system-test {
+  color: var(--cf-accent-green) !important;
+}
+
+blockquote {
+  color: var(--cf-text-muted) !important;
+}
+
+div.alert-success {
+  color: #0f5711 !important;
+  background-color: #87df63 !important;
+}
+
+div.ttypography .tt,
+.search-help code {
+  color: var(--cf-text-white) !important;
+  border-color: var(--cf-bg-darker) !important;
+  background-color: var(--cf-bg-darker) !important;
+}
+
+.sidebar-menu ul li {
+  border: none !important;
+}
+
+.sidebar-menu ul li:hover {
+  border: 1px solid var(--cf-bg-secondary) !important;
+  background-color: var(--cf-bg-secondary) !important;
+}
+
+.problems tr.rejected-problem td.act {
+  background-color: #ffabab !important;
+}
+
+.problems tr.accepted-problem td.act {
+  background-color: #b5fd95 !important;
+}
+.problems tr.rejected-problem td.id {
+  border-left-color: #ffabab !important;
+}
+
+.problems tr.accepted-problem td.id {
+  border-left-color: #b5fd95 !important;
+}
+
+div.ttypography .MathJax {
+  filter: invert(1) !important;
+}
+
+div.ttypography a:hover,
+div.ttypography a:focus {
+  background-color: #020466 !important;
+}
+
+table tbody tr th a img[alt^="Sort"] {
+  filter: invert(1);
+}
+
+.datatable td.state[style^="background-color: rgb(221, 238, 255);"] {
+  background-color: #4a4a4a !important;
+}
+
+.datatable td.state[style^="background-color: rgb(212, 237, 201);"] {
+  background-color: #005a07 !important;
+}
+
+.miu-complete,
+.miu-comment,
+input[name^="tag"].ac_input,
+.send-talk-form table .wysiwyg {
+  background-color: var(--cf-bg-input) !important;
+  border-color: var(--cf-bg-input) !important;
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="file"] {
+  color: var(--cf-text-main) !important;
+  background: var(--cf-bg-lighter) !important;
+  border-color: var(--cf-bg-lighter) !important;
+}
+
+.miu-complete,
+.miu-comment,
+.send-talk-form table .wysiwyg {
+  background: #fff !important;
+  filter: invert(90%) hue-rotate(180deg);
+}
+
+.miu-comment .markItUp .markItUpButton8 a,
+.miu-complete .markItUp .markItUpButton12 a {
+  filter: invert(90%) hue-rotate(180deg);
+}
+
+textarea[name="input"],
+textarea[name="output"],
+#sourceCodeTextarea {
+  background-color: #272822;
+  color: var(--cf-text-white);
+}
+
+.delete-resource-link,
+.close {
+  filter: invert(1);
+  background-color: #e0e0e0 !important;
+}
+
+.close_image {
+  opacity: 0.7 !important;
+}
+
+.problem-statement .test-example-line-even {
+  background-color: #444 !important;
+}
+
+span.error {
+  color: var(--cf-accent-red) !important;
+}
+
+.roundbox.highlight-blue .caption.titled {
+  color: #ddddee !important;
+}
+
+.roundbox.highlight-blue .caption.titled + div {
+  color: rgb(230, 230, 230) !important;
+}
+
+.second-level-menu ul li a:link,
+.second-level-menu ul li a:visited,
+span.verdict-unsuccessful-challenge,
+span.cell-rejected,
+a:not([href]):not(.rated-user),
+a:link:not(.rated-user) {
+  color: var(--cf-accent-blue) !important;
+}
+
+a:visited:not(.rated-user) {
+  color: var(--cf-accent-blue-visited) !important;
+}
+
+.info,
+.ttypography,
+.ttypography table,
+.ttypography h1,
+.ttypography h2,
+.ttypography h3,
+.ttypography h4,
+.ttypography h5,
+.ttypography h6,
+.right-meta,
+.tickLabel,
+.personal-sidebar,
+.roundbox,
+#footer,
+.pagination,
+#locationSelect,
+#pageContent,
+#pageContent > div:not(:first-child),
+body.notfoundpage h3,
+#facebox .content,
+.lang-chooser,
+.page-index.active,
+span#u_0_4,
+.menu-list-container ul li a,
+#header h3,
+body > p,
+body > ul {
+  color: var(--cf-text-main) !important;
+}
+
+#pageContent div div h3 a,
+.comment-table.highlight-blue .right .ttypography p,
+.comment-table.highlight-blue .right .info {
+  color: var(--cf-text-white) !important;
+}
+
+.unread td {
+  background-color: var(--cf-bg-highlight) !important;
+}
+
+div.alert-success a {
+  color: var(--cf-accent-blue-dark) !important;
+}
+
+.rtable span {
+  color: var(--cf-text-main) !important;
+}
+
+.test-example-line {
+  background-color: var(--cf-bg-test-line) !important;
+}
+
+font[color="red"] {
+  color: var(--cf-accent-red) !important;
+}
+
+[style*="color: rgb(0, 128, 0)"],
+[style*="color: #008000"] {
+  color: var(--cf-accent-green) !important;
+}
+
+ul.second-level-menu-list li:hover a:hover {
+  color: var(--cf-accent-blue-dark) !important;
+}
+
+ul.second-level-menu-list li:hover a:link {
+  color: var(--cf-accent-blue-dark) !important;
+}
+
+li.selectedLava a:link {
+  color: var(--cf-accent-blue-dark) !important;
+}
+
+ul.second-level-menu-list:hover
+  li:hover:not(.selectedLava)
+  + .selectedLava
+  a:link {
+  color: var(--cf-accent-blue) !important;
+}
+
+a:link.notice {
+  color: var(--cf-text-dim) !important;
+}
+
+.tex-formula {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+div ul.menu-list li a:link,
+div ul.menu-list li a:visited {
+  color: var(--cf-text-white) !important;
+}
+
+.verdict-rejected {
+  color: lightblue !important;
+}
+
+a.red-link[href^="/contestRegistration"] {
+  background-color: #9a0000 !important;
+  color: var(--cf-text-main) !important;
+}
+
+.topic .content center a {
+  color: var(--cf-text-main) !important;
+}
+
+.topic .title p {
+  color: rgb(94, 146, 255) !important;
+}
+
+.caption.titled,
+.contest-state-phase {
+  color: #91a5cd !important;
+}
+
+.input pre,
+.output pre,
+pre.input,
+pre.output,
+pre.answer,
+pre.checker,
+pre.diagnostics {
+  color: var(--cf-text-white) !important;
+}
+
+span.contest-state-regular,
+.countdown {
+  color: var(--cf-text-dim) !important;
+}
+
+.datatable,
+.status-frame-datatable {
+  color: var(--cf-text-main) !important;
+  border-radius: 5px;
+  background-color: var(--cf-bg-panel) !important;
+}
+
+.datatable td.state[style^="back"] .notice {
+  color: #cccccc !important;
+}
+
+.personal-sidebar div ul.propertyLinks li:nth-child(2) span[style*="green"] {
+  color: var(--cf-accent-green) !important;
+}
+
+.personal-sidebar
+  div
+  ul.propertyLinks
+  li:nth-child(2)
+  span:not([style*="green"]) {
+  color: var(--cf-text-muted) !important;
+}
+
+.fix-tag-topic-contrast span a {
+  color: var(--cf-text-white) !important;
+}
+
+#vote-list-filterDifficultyLowerBorder li a.vote-item:hover,
+#vote-list-filterDifficultyLowerBorder {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.roundbox {
+  border-radius: 5px;
+}
+
+.ttypography h5 {
+  font-weight: bold;
+}
+
+.roundbox-lt,
+.roundbox-lb,
+.roundbox-rt,
+.roundbox-rb,
+.datatable .lt,
+.datatable .lb,
+.datatable .rt,
+.datatable .rb,
+.datatable .ilt,
+.datatable .irt {
+  display: none !important;
+}
+
+.bottom-links {
+  border-bottom-left-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+}
+
+.second-level-menu-list li {
+  border-radius: 5px !important;
+}
+
+td.dark span[style^="color: #0000bb;"] {
+  color: var(--cf-accent-blue-bright) !important;
+}
+
+.datatable td.state a[href$="standings"] {
+  color: #8cc3f9 !important;
+}
+
+div.setting-name {
+  color: #6c8bcc !important;
+}
+
+span.user-legendary::first-letter,
+a.user-legendary::first-letter,
+span.user-admin,
+a.user-admin,
+span.user-black,
+a.user-black {
+  color: var(--cf-text-white) !important;
+}
+
+tr.user-blue td,
+span.user-blue,
+a.user-blue {
+  color: #757dff !important;
+}
+
+tr.user-red td,
+span.user-red,
+a.user-red,
+span.user-legendary,
+a.user-legendary {
+  color: var(--cf-accent-red) !important;
+}
+
+tr.user-cyan td,
+span.user-cyan,
+a.user-cyan {
+  color: #01bdb2 !important;
+}
+
+tr.user-violet td,
+span.user-violet,
+a.user-violet {
+  color: #ce8aff !important;
+}
+
+tr.user-gray td,
+span.user-gray,
+a.user-gray {
+  color: #8c8c8c !important;
+}
+
+div.diffHtmlTarget pre.prettyprint del[style^="background:#ff8080"] {
+  background: #7b1313 !important;
+}
+
+div.diffHtmlTarget pre.prettyprint ins[style^="background:#80ff80"] {
+  background: #004600 !important;
+}
+div.diffHtmlTarget pre.prettyprint ins[style^="background:#80ff80"] .lit {
+  background: #ff9d9d !important;
+}
+
+:root {
+  --cf-bg: #121212;
+  --cf-bg-elevated: #1a1a1a;
+  --cf-border-color: #3a3a3a;
+  --cf-text: #e8e8e8;
+  --cf-text-muted: #9a9a9a;
+  --cf-bg-highlight: #13203a;
+  --cf-accent: #3d7eff;
+}
+
+.SumoSelect > .CaptionCont {
+  background-color: var(--cf-bg) !important;
+  color: var(--cf-text) !important;
+  border: 1px solid var(--cf-border-color) !important;
+  border-radius: 6px !important;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.SumoSelect:hover > .CaptionCont {
+  border-color: #555 !important;
+}
+
+.SumoSelect.open > .CaptionCont,
+.SumoSelect > .CaptionCont:focus-within {
+  border-color: var(--cf-accent) !important;
+  box-shadow: 0 0 0 2px rgba(61, 126, 255, 0.15) !important;
+}
+
+.SumoSelect.disabled > .CaptionCont {
+  background-color: #0a0a0a !important;
+  color: var(--cf-text-muted) !important;
+  border-color: #2a2a2a !important;
+  cursor: not-allowed;
+}
+
+.SumoSelect > .CaptionCont > label > span.placeholder {
+  color: var(--cf-text-muted) !important;
+}
+
+.SumoSelect > .CaptionCont > span > i {
+  color: #ffffff;
+  border: 1px red solid;
+  opacity: 1;
+}
+
+.SumoSelect:hover > .CaptionCont > span > i {
+  opacity: 1;
+}
+
+.SumoSelect > .optWrapper {
+  background-color: var(--cf-bg-elevated) !important;
+  border: 1px solid var(--cf-border-color) !important;
+  color: var(--cf-text) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden;
+}
+
+.SumoSelect > .optWrapper > .options {
+  scrollbar-width: thin;
+  scrollbar-color: #444 var(--cf-bg-elevated);
+}
+.SumoSelect > .optWrapper > .options::-webkit-scrollbar {
+  width: 8px;
+}
+.SumoSelect > .optWrapper > .options::-webkit-scrollbar-track {
+  background: var(--cf-bg-elevated);
+}
+.SumoSelect > .optWrapper > .options::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+.SumoSelect > .optWrapper > .options li.opt {
+  background-color: transparent !important;
+  color: var(--cf-text) !important;
+  border-bottom: 1px solid #232323 !important;
+  transition: background-color 0.1s ease;
+}
+
+.SumoSelect > .optWrapper > .options li.opt:last-child {
+  border-bottom: none !important;
+}
+
+.SumoSelect > .optWrapper > .options li.opt:hover {
+  background-color: #202020 !important;
+  color: var(--cf-text) !important;
+}
+
+.SumoSelect > .optWrapper > .options li.opt.selected {
+  background-color: var(--cf-bg-highlight) !important;
+  color: #ffffff !important;
+}
+
+.SumoSelect > .optWrapper > .options li.opt.selected:hover {
+  background-color: #1a2c52 !important;
+}
+
+.SumoSelect > .optWrapper > .options li.opt span i {
+  border: 1px solid var(--cf-border-color) !important;
+  background-color: var(--cf-bg) !important;
+}
+.SumoSelect > .optWrapper > .options li.opt.selected span i {
+  background-color: var(--cf-accent) !important;
+  border-color: var(--cf-accent) !important;
+}
+
+.SumoSelect > .optWrapper > .options li.opt.disabled {
+  color: var(--cf-text-muted) !important;
+  background-color: transparent !important;
+}
+
+.SumoSelect > .optWrapper > .options li.opt.selectAll {
+  background-color: #161616 !important;
+  border-bottom: 1px solid var(--cf-border-color) !important;
+}
+
+.SumoSelect .search-txt {
+  background-color: var(--cf-bg) !important;
+  color: var(--cf-text) !important;
+  border: 1px solid var(--cf-border-color) !important;
+}
+
+select.filterTypes,
+select.filterRated,
+select.filterTried {
+  background-color: var(--cf-bg) !important;
+  color: var(--cf-text) !important;
+  border: 1px solid var(--cf-border-color) !important;
+  border-radius: 6px !important;
+}
+
+.SumoSelect > .CaptionCont > label > i {
+  background: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 5px solid transparent !important;
+  border-right: 5px solid transparent !important;
+  border-top: 6px solid #ffffff !important;
+}
+
+.SumoSelect > .CaptionCont > label > i,
+.SumoSelect > .CaptionCont > span > i {
+  filter: brightness(0) saturate(100%) invert(100%) !important;
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) !important;
+}
+
+.SumoSelect > .CaptionCont svg,
+.SumoSelect > .CaptionCont svg path {
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.SumoSelect > .CaptionCont > label > i {
+  background-image: none !important;
+  position: relative;
+}
+.SumoSelect > .CaptionCont > label > i::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #ffffff;
+}
