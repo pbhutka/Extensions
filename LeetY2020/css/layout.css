@@ -2,6 +2,7 @@
   scrollbar-width: auto;
 }
 
+
 *::-webkit-scrollbar {
   display: block !important;
   width: 0px !important;
@@ -20,6 +21,37 @@
 *::-webkit-scrollbar-track:horizontal {
   background-color: transparent !important;
 }
+
+/* Flatten pseudo-elements too — many focus rings are drawn via ::before/::after */
+html.dark *,
+html.dark *::before,
+html.dark *::after {
+  border-radius: 0 !important;
+}
+
+/* Monaco's own focus border overlay */
+html.dark .monaco-editor.focused,
+html.dark .monaco-editor .overflow-guard,
+html.dark .monaco-editor .decorationsOverviewRuler {
+  border-radius: 0 !important;
+  outline: none !important;
+}
+
+/* Kill any focus-visible ring radius sitewide */
+html.dark *:focus,
+html.dark *:focus-visible {
+  border-radius: 0 !important;
+  border: 1px solid #3f4451;
+  outline-offset: 0 !important;
+}
+
+/* Enlarge the profile avatar in the top navbar */
+html.dark img[alt*="avatar" i],
+html.dark img[class*="avatar" i] {
+  border-radius: 50% !important; /* remove if you want it to stay circular */
+}
+
+
 pre,
 div[class*="example-block"],
 div.bg-opacity-5.bg-neutral-0 {
