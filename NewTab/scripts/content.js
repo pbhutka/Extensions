@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Dynamic Style Injection to Shrink Containers & Gaps ---
   const style = document.createElement("style");
   style.textContent = `
     .dashboard-column {
@@ -75,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const addSpaceBtn = document.getElementById("add-space-btn");
   const searchInput = document.getElementById("search-input");
 
-  // Space Modal Elements
   const spaceModalOverlay = document.getElementById("space-modal-overlay");
   const spaceModalTitle = document.getElementById("space-modal-title");
   const spaceNameInput = document.getElementById("space-name-input");
@@ -104,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const clockTime = document.getElementById("clock-time");
   const clockGreeting = document.getElementById("clock-greeting");
 
-  // Confirm Dialog Modal Elements
   const confirmModalOverlay = document.getElementById("confirm-modal-overlay");
   const confirmModalTitle = document.getElementById("confirm-modal-title");
   const confirmModalMessage = document.getElementById("confirm-modal-message");
@@ -182,10 +179,9 @@ document.addEventListener("DOMContentLoaded", () => {
       await storageSet({ settings: data.settings });
     }
 
-    // Load from data.json if storage environment configuration is empty
     if (data.spaces.length === 0) {
       try {
-        const response = await fetch("../data.json");
+        const response = await fetch("../links/links.json");
         const parsed = await response.json();
 
         if (
@@ -253,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } catch (err) {
         console.warn(
-          "Could not load backup default setup from data.json, structural layout defaulting to empty.",
+          "Could not load backup default setup from link.json, structural layout defaulting to empty.",
           err,
         );
         const homeId = "space_home";
@@ -564,7 +560,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ]);
       });
 
-      // Allow dragging a container onto a space tab to move it there
       btn.addEventListener("dragover", (e) => {
         if (draggedType !== "board") return;
         e.preventDefault();
@@ -682,10 +677,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const targetSpaceIsEmpty = targetSpaceBoards.length === 0;
 
     if (boardLinks.length === 1 && targetSpaceIsEmpty) {
-      // Special case: the container only has a single link and the
-      // destination space is completely empty. Instead of relocating the
-      // old container as-is, paste its one link into a fresh container in
-      // the new space and remove the old container entirely.
       const newBoard = {
         id: uid("b"),
         title: "",
@@ -707,8 +698,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       await storageSet({ boards: updatedBoards, bookmarks: updatedBookmarks });
     } else {
-      // Regular case: move the whole container into the target space,
-      // appending it to the end of its column lane there.
       const laneBoards = targetSpaceBoards.filter(
         (b) => (b.column || 0) === (board.column || 0),
       );
@@ -731,19 +720,6 @@ document.addEventListener("DOMContentLoaded", () => {
     editingLinkId = link.id;
     modalTitle.textContent = "Edit Link";
     deleteItemBtn.classList.remove("hidden");
-
-    // if (boardSelector) {
-    //   const { boards } = await storageGet({ boards: [] });
-    //   const spaceBoards = boards.filter((b) => b.spaceId === activeSpaceId);
-    //   boardSelector.innerHTML = "";
-    //   spaceBoards.forEach((b, idx) => {
-    //     const opt = document.createElement("option");
-    //     opt.value = b.id;
-    //     opt.textContent = `Container ${idx + 1}`;
-    //     if (b.id === link.boardId) opt.selected = true;
-    //     boardSelector.appendChild(opt);
-    //   });
-    // }
     if (linkTitleInput) linkTitleInput.value = link.title;
     if (linkUrlInput) linkUrlInput.value = link.url;
 
@@ -780,7 +756,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const title = linkTitleInput ? linkTitleInput.value.trim() : "";
       const url = linkUrlInput ? normalizeUrl(linkUrlInput.value.trim()) : "";
 
-      // Preserve existing boardId when editing, or fallback to selector if available
       let boardId = boardSelector ? boardSelector.value : "";
       if (editingLinkId) {
         const existingLink = data.bookmarks.find(
@@ -898,7 +873,6 @@ document.addEventListener("DOMContentLoaded", () => {
     boardCard.draggable = true;
     boardCard.dataset.boardId = board.id;
 
-    // 1. Links List View Context
     const linksList = document.createElement("div");
     linksList.className =
       "links-list" + (visibleLinks.length === 0 ? " links-empty" : "");
@@ -914,7 +888,6 @@ document.addEventListener("DOMContentLoaded", () => {
     visibleLinks.forEach((link) => linksList.appendChild(createLinkItem(link)));
     boardCard.appendChild(linksList);
 
-    // 2. Inline Card Modification Input Field Panel (Appended First)
     const inlineAddPanel = document.createElement("div");
     inlineAddPanel.className = "inline-add-panel hidden";
 
@@ -989,7 +962,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     boardCard.appendChild(inlineAddPanel);
 
-    // 3. Bottom Action Row Footer Container (Appended Last so it stays at the very bottom)
     const footerActions = document.createElement("div");
     footerActions.className = "board-footer-actions";
 
