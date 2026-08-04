@@ -26,37 +26,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
 
-      loadLocalDataJson(storageHandles);
+      // Load data statically instead of fetching
+      loadStaticData(storageHandles);
     },
   );
 
-  function loadLocalDataJson(existingStorageHandles) {
-    const dataUrl = chrome.runtime.getURL("data.json");
-
-    fetch(dataUrl)
-      .then((response) => {
-        if (!response.ok) throw new Error("Could not find data.json");
-        return response.json();
-      })
-      .then((fileHandles) => {
-        if (Array.isArray(fileHandles)) {
-          let mergedHandles = Array.from(
-            new Set([...existingStorageHandles, ...fileHandles]),
-          );
-          chrome.storage.local.set({ userHandles: mergedHandles }, function () {
-            renderTable(mergedHandles);
-          });
-        } else {
-          renderTable(existingStorageHandles);
-        }
-      })
-      .catch((err) => {
-        console.log(
-          "Reading data.json failed or file missing, rendering storage:",
-          err,
-        );
-        renderTable(existingStorageHandles);
+  function loadStaticData(existingStorageHandles) {
+    // Check if the global fileHandles array exists from codeforces-friends.js
+    if (typeof fileHandles !== "undefined" && Array.isArray(fileHandles)) {
+      let mergedHandles = Array.from(
+        new Set([...existingStorageHandles, ...fileHandles]),
+      );
+      chrome.storage.local.set({ userHandles: mergedHandles }, function () {
+        renderTable(mergedHandles);
       });
+    } else {
+      renderTable(existingStorageHandles);
+    }
   }
 
   function updateBackground(enabled) {
@@ -156,14 +142,18 @@ document.addEventListener("DOMContentLoaded", function () {
     exportBtn.addEventListener("click", function () {
       chrome.storage.local.get("userHandles", function (result) {
         let userHandles = result.userHandles || [];
-        let blob = new Blob([JSON.stringify(userHandles, null, 2)], {
-          type: "application/json",
+
+        // Format the array as a JavaScript constant declaration string
+        let fileContent = `const fileHandles = ${JSON.stringify(userHandles, null, 2)};`;
+
+        let blob = new Blob([fileContent], {
+          type: "text/javascript",
         });
         let url = URL.createObjectURL(blob);
 
         let a = document.createElement("a");
         a.href = url;
-        a.download = "friends.json";
+        a.download = "codeforces-friends.js";
         a.click();
         URL.revokeObjectURL(url);
       });

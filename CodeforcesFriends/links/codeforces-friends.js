@@ -1,4 +1,5 @@
-[
+
+const fileHandles = [
   "pbhutka",
   "Geetansh_123",
   "Dishank35117",
@@ -14,4 +15,4 @@
   "0xCosmic",
   "AbhinavSingh07",
   "shadowCoder123"
-]
+];

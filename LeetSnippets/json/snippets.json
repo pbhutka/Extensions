@@ -1,0 +1,14 @@
+[
+  {
+    "trigger": "fast",
+    "snippet": "ios::sync_with_stdio(false);\ncin.tie(nullptr);\n"
+  },
+  {
+    "trigger": "rear",
+    "snippet": "#define in :\n#define len(arr) arr.size()\n#define print(val) cout << val\n#define pb(val) push_back(val)\n#define popb() pop_back()\n#define range(i, s, e) for(int i=s; i<e; i++)\n#define revrange(i, s, e) for (int i=e-1; i>=s; i--)\n#define sortall(arr) sort(arr.begin(), arr.end())\n#define revsortall(arr) sort(arr.rbegin(), arr.rend())\n#define revarr(arr) reverse(arr.begin(), arr.end())\n"
+  },
+  {
+    "trigger": "vice",
+    "snippet": "#define sum(arr) accumulate(arr.begin(), arr.end(), 0LL)\n#define maxm(arr) *max_element(arr.begin(), arr.end())\n#define minm(arr) *min_element(arr.begin(), arr.end())\n#define maxmIdx(arr) max_element(arr.begin(), arr.end()) - arr.begin()\n#define minmIdx(arr) min_element(arr.begin(), arr.end()) - arr.begin()\n"
+  }
+]

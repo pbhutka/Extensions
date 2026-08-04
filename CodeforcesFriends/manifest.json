@@ -13,13 +13,14 @@
       ]
     }
   ],
+  "host_permissions": ["https://codeforces.com/*", "http://localhost:8080/*"],
   "action": {
     "default_popup": "/html/popup.html"
   },
   "permissions": ["storage"],
   "web_accessible_resources": [
     {
-      "resources": ["data.json"],
+      "resources": ["/links/codeforces-friends.json"],
       "matches": ["<all_urls>"]
     }
   ],
