@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "WMovies Dark Select",
+  "version": "1.0",
+  "description": "pbhutka",
+  "content_scripts": [
+    {
+      "matches": ["https://wmovies.icu/*"],
+      "css": ["/css/styles.css"],
+      "js": ["/scripts/content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
