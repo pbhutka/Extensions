@@ -1,0 +1,337 @@
+      /* ==========================================================================
+     Tokens
+     ========================================================================== */
+      :root {
+        --void: #08090c;
+        --ink: #101218;
+        --surface: #171a21;
+        --surface-hi: #1e222b;
+        --border: #262b35;
+        --border-soft: #1d212a;
+        --text: #eef1f6;
+        --text-dim: #6e7787;
+
+        /* Codeforces rank ladder */
+        --rank-gray: #7c7c82;
+        --rank-green: #3ba55c;
+        --rank-cyan: #12b3a8;
+        --rank-blue: #3a7bd5;
+        --rank-purple: #a259d9;
+        --rank-orange: #e8912d;
+        --rank-red: #e34850;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border-radius: 0 !important;
+      }
+
+      html,
+      body {
+        width: 420px;
+      }
+
+      body {
+        font-family: "Geist Mono", "Courier New", monospace;
+        background: var(--void);
+        background-image:
+          radial-gradient(
+            circle at 15% 10%,
+            rgba(58, 123, 213, 0.06),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 85% 90%,
+            rgba(227, 72, 80, 0.05),
+            transparent 40%
+          );
+        color: var(--text);
+        padding: 16px;
+      }
+
+      .App {
+        width: 100%;
+      }
+
+      .content {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        background: var(--ink);
+        border: 1px solid var(--border);
+        box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.55);
+        padding-left: 7px;
+        overflow: hidden;
+      }
+
+      .rank-spine {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          var(--rank-gray) 0%,
+          var(--rank-gray) 14.28%,
+          var(--rank-green) 14.28%,
+          var(--rank-green) 28.56%,
+          var(--rank-cyan) 28.56%,
+          var(--rank-cyan) 42.84%,
+          var(--rank-blue) 42.84%,
+          var(--rank-blue) 57.12%,
+          var(--rank-purple) 57.12%,
+          var(--rank-purple) 71.4%,
+          var(--rank-orange) 71.4%,
+          var(--rank-orange) 85.68%,
+          var(--rank-red) 85.68%,
+          var(--rank-red) 100%
+        );
+        opacity: 0.9;
+      }
+
+      .term-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .term-dots {
+        display: flex;
+        gap: 6px;
+      }
+      .term-dots span {
+        width: 8px;
+        height: 8px;
+        display: block;
+        border-radius: 50% !important;
+      }
+      .term-dots span:nth-child(1) {
+        background: var(--rank-gray);
+      }
+      .term-dots span:nth-child(2) {
+        background: var(--rank-orange);
+      }
+      .term-dots span:nth-child(3) {
+        background: var(--rank-red);
+      }
+
+      .term-path {
+        font-size: 12px;
+        color: var(--text-dim);
+        letter-spacing: 0.4px;
+      }
+      .term-path b {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      .container {
+        padding: 26px;
+      }
+
+      .UserHandle {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        margin-bottom: 12px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        color: var(--rank-cyan);
+      }
+      .UserHandle::before {
+        content: "$";
+        color: var(--rank-orange);
+        font-weight: 800;
+      }
+
+      .input-group {
+        position: relative;
+        margin-bottom: 16px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 13px 14px 13px 26px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        color: var(--text);
+        font-size: 14px;
+        font-family: inherit;
+        outline: none;
+        transition:
+          border-color 0.15s ease,
+          box-shadow 0.15s ease;
+      }
+      .input-group::before {
+        content: ">";
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--rank-green);
+        font-weight: 700;
+        pointer-events: none;
+      }
+      input[type="text"]::placeholder {
+        color: var(--text-dim);
+      }
+      input[type="text"]:focus {
+        border-color: var(--rank-cyan);
+        box-shadow: 0 0 0 3px rgba(18, 179, 168, 0.12);
+      }
+
+      .update-button {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .btn {
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        padding: 13px 20px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .btn-white {
+        background: #ffffff;
+        color: #0a0a0a;
+        border-color: #ffffff;
+      }
+      .btn-white:hover {
+        background: #d8d8d8;
+        border-color: #d8d8d8;
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: #ffffff;
+        border: 1px solid var(--border);
+      }
+      .btn-outline:hover {
+        background: var(--surface-hi);
+        border-color: #ffffff;
+      }
+
+      .btn:active {
+        transform: translateY(1px);
+      }
+
+      .error-message {
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 12px;
+        min-height: 14px;
+      }
+
+      #table-container {
+        margin-top: 18px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        min-height: 180px;
+        max-height: 280px;
+        overflow-y: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th {
+        background: var(--surface-hi);
+        color: var(--text-dim);
+        font-size: 10.5px;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        padding: 11px 16px;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+      }
+
+      td {
+        padding: 11px 16px;
+        border-bottom: 1px solid var(--border-soft);
+        color: var(--text);
+        font-size: 13.5px;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .handle-cell {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .rank-dot {
+        width: 8px;
+        height: 8px;
+        flex: none;
+        border-radius: 50% !important;
+      }
+
+      .text-right {
+        text-align: right;
+      }
+
+      /* Delete Button - Hidden until row hover */
+      .delete-button {
+        cursor: pointer;
+        color: var(--text-dim);
+        border: none;
+        background: none;
+        font-size: 13px;
+        padding: 4px 6px;
+        line-height: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.2s ease,
+          color 0.2s ease,
+          visibility 0.2s;
+      }
+      tr:hover .delete-button {
+        opacity: 1;
+        visibility: visible;
+      }
+      .delete-button:hover {
+        color: var(--rank-red);
+      }
+
+      /* Scrollbar */
+      #table-container::-webkit-scrollbar {
+        width: 8px;
+      }
+      #table-container::-webkit-scrollbar-track {
+        background: var(--surface);
+      }
+      #table-container::-webkit-scrollbar-thumb {
+        background: var(--border);
+      }
+      #table-container::-webkit-scrollbar-thumb:hover {
+        background: var(--text-dim);
+      }

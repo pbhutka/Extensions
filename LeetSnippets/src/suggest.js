@@ -1,10 +1,3 @@
-// src/suggest.js
-// Injected into the page (same way as initialize.js / enable.js / disable.js).
-// Adds a Monaco completion provider that suggests identifiers (variables and
-// functions) already present in the current editor buffer — independent of
-// LeetBoost's snippet-expansion feature, so it works whether AutoCorrect is
-// on or off.
-
 (function () {
   if (window.__leetBoostSuggestInstalled) return;
   window.__leetBoostSuggestInstalled = true;
@@ -12,7 +5,7 @@
   const LOG = (...args) => console.log("[LeetBoost:suggest]", ...args);
 
   const RESERVED = new Set([
-    // JS / TS
+    
     "var",
     "let",
     "const",
@@ -58,7 +51,6 @@
     "interface",
     "type",
     "implements",
-    // Python
     "def",
     "self",
     "pass",
@@ -79,7 +71,6 @@
     "raise",
     "except",
     "print",
-    // C / C++ / Java / general
     "int",
     "long",
     "short",

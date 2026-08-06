@@ -33,18 +33,35 @@ function renderSnippets() {
       <div class="snippet-top">
         <span class="trigger"><b>${item.trigger}</b></span>
         <div class="actions">
-          <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
-          <button class="del-btn"><i class="fa-solid fa-trash"></i></button>
+          <button class="copy-btn" title="Copy snippet"><i class="fa-solid fa-copy"></i></button>
+          <button class="edit-btn" title="Edit snippet"><i class="fa-solid fa-pen"></i></button>
+          <button class="del-btn" title="Delete snippet"><i class="fa-solid fa-trash-can"></i></button>
         </div>
       </div>
       <code>${item.snippet}</code>
     `;
 
+    card.querySelector(".copy-btn").onclick = (e) => copySnippet(item.snippet, e.currentTarget);
     card.querySelector(".edit-btn").onclick = () => openEditor(item.trigger);
     card.querySelector(".del-btn").onclick = () => deleteSnippet(item.trigger);
 
     snippetContainer.appendChild(card);
   });
+}
+
+async function copySnippet(text, btnElement) {
+  try {
+    await navigator.clipboard.writeText(text);
+    const icon = btnElement.querySelector("i");
+    icon.className = "fa-solid fa-check";
+    btnElement.classList.add("copied");
+    setTimeout(() => {
+      icon.className = "fa-solid fa-copy";
+      btnElement.classList.remove("copied");
+    }, 1200);
+  } catch (err) {
+    console.error("Failed to copy snippet: ", err);
+  }
 }
 
 function openEditor(trigger = null) {
