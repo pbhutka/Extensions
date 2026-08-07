@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,79.9,800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+.lc-company-tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  margin-bottom: 3px;
+  padding: 5px 6px;
+  background-color: transparent;
+  border-radius: 8px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  width: fit-content;
+  max-width: 100%;  
+}
+
+.lc-company-badge {
+  display: inline-block;
+  background-color: #3d3d3d;
+  color: #d0d0d0;
+  padding: 1px 6px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.lc-company-badge-extra {
+  display: none;
+}
+
+.lc-company-tags-wrapper.lc-expanded .lc-company-badge-extra {
+  display: inline-block;
+}
+
+.lc-company-toggle {
+  display: inline-block;
+  background-color: transparent;
+  color: #9a9a9a;
+  padding: 2px 7px;
+  border-radius: 5px;
+  border: 1px solid #4a4a4a;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.lc-company-toggle:hover {
+  background-color: #3d3d3d;
+  color: #d0d0d0;
+}
+
+.lc-company-none {
+  color: #8c8c8c;
+  font-style: italic;
+}
+
+/* Light theme support (LeetCode also ships a light mode) */
+@media (prefers-color-scheme: light) {
+  .lc-company-tags-wrapper {
+    background-color: #eeeeee;
+    border-color: #dcdcdc;
+  }
+
+  .lc-company-badge {
+    background-color: #e2e2e2;
+    color: #333333;
+  }
+
+  .lc-company-toggle {
+    color: #666666;
+    border-color: #cccccc;
+  }
+
+  .lc-company-toggle:hover {
+    background-color: #e2e2e2;
+    color: #333333;
+  }
+}
+
+.bricolage-grotesque-500 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 79.9;
+}
+
+.space-grotesk-500 {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
