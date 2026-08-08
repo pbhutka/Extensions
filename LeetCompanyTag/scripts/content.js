@@ -1,5 +1,12 @@
 let currentSlug = "";
 
+function removeLeetCodeCompanies() {
+  document.querySelectorAll("div").forEach((div) => {
+    if (div.textContent.trim() === "Companies") {
+      div.remove();
+    }
+  });
+}
 // Extract actual problem slug ignoring /description, /solutions, /submissions, etc.
 function getProblemSlug() {
   const match = window.location.pathname.match(/\/problems\/([^\/]+)/);
@@ -16,6 +23,7 @@ function getProblemSlug() {
     "editorial",
     "discussion",
   ];
+
   if (subRoutes.includes(rawSlug)) return null;
 
   return rawSlug;
@@ -44,6 +52,7 @@ function injectCompanyTags(companies) {
     if (!parent.contains(container)) {
       parent.insertBefore(container, titleElement.nextSibling);
     }
+
     return true;
   }
 
@@ -58,23 +67,47 @@ function injectCompanyTags(companies) {
     companies.forEach((company, index) => {
       const badge = document.createElement("span");
       badge.className = "lc-company-badge";
+
       if (index >= INITIAL_VISIBLE_COUNT) {
         badge.classList.add("lc-company-badge-extra");
       }
+
       badge.innerText = company;
       container.appendChild(badge);
     });
 
     const remaining = companies.length - INITIAL_VISIBLE_COUNT;
+
     if (remaining > 0) {
       const toggleBtn = document.createElement("button");
       toggleBtn.type = "button";
       toggleBtn.className = "lc-company-toggle";
-      toggleBtn.innerText = `+${remaining} more`;
+      // toggleBtn.innerText = `+${remaining} more`;
+
+      // toggleBtn.addEventListener("click", () => {
+      //   const expanded = container.classList.toggle("lc-expanded");
+
+      //   toggleBtn.innerText = expanded ? "Show less" : `+${remaining} more`;
+      // });
+      toggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+	<path class="gyxsqc" />
+</svg>
+`;
+
       toggleBtn.addEventListener("click", () => {
         const expanded = container.classList.toggle("lc-expanded");
-        toggleBtn.innerText = expanded ? "Show less" : `+${remaining} more`;
+
+        toggleBtn.innerHTML = expanded
+          ? `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+	<path class="ybqt-k" />
+</svg>
+`
+          : `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+	<path class="gyxsqc" />
+</svg>
+`;
       });
+
       container.appendChild(toggleBtn);
     }
   } else {
@@ -85,17 +118,23 @@ function injectCompanyTags(companies) {
   }
 
   parent.insertBefore(container, titleElement.nextSibling);
+
   return true;
 }
 
 function processCurrentPage() {
   const slug = getProblemSlug();
   if (!slug) return;
+  removeLeetCodeCompanies();
 
   if (slug !== currentSlug) {
     currentSlug = slug;
+
     const existing = document.getElementById("lc-custom-company-tags");
-    if (existing) existing.remove();
+
+    if (existing) {
+      existing.remove();
+    }
   }
 
   chrome.runtime.sendMessage({ action: "getCompanyMap" }, (response) => {
@@ -108,9 +147,12 @@ function processCurrentPage() {
 
     // Poll until DOM mounts the problem title component
     let attempts = 0;
+
     const interval = setInterval(() => {
       attempts++;
+
       const success = injectCompanyTags(companies);
+
       if (success || attempts > 30) {
         clearInterval(interval);
       }
@@ -118,8 +160,10 @@ function processCurrentPage() {
   });
 }
 
-// Continuous DOM Observer to handle dynamic sub-route changes (/description, /solutions)
+// Continuous DOM Observer to handle dynamic sub-route changes
+// (/description, /solutions)
 let lastUrl = location.href;
+
 const observer = new MutationObserver(() => {
   const url = location.href;
   const slug = getProblemSlug();
@@ -134,7 +178,25 @@ const observer = new MutationObserver(() => {
   }
 });
 
-observer.observe(document.body, { childList: true, subtree: true });
+observer.observe(document.body, {
+  childList: true,
+  subtree: true,
+});
 
 // Initial run
 processCurrentPage();
+
+// Prevent copying text from the injected company tags
+document.addEventListener("copy", (event) => {
+  const selection = window.getSelection();
+  const node = selection?.anchorNode;
+
+  if (node) {
+    const element =
+      node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
+
+    if (element?.closest("#lc-custom-company-tags")) {
+      event.preventDefault();
+    }
+  }
+});
