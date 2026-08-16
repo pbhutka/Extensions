@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="my-theme" _name="My Theme" version="1.0">
+    <metadata>
+        <property name="variant">dark</property>
+    </metadata>
+
+    <style name="text" foreground="#D4D4D4" background="#1E1E1E"/>
+
+    <style name="def:comment"
+           foreground="#6A9955"
+           italic="true"/>
+
+    <style name="def:string"
+           foreground="#CE9178"/>
+
+    <style name="def:constant"
+           foreground="#4FC1FF"/>
+
+    <style name="def:keyword"
+           foreground="#C586C0"
+           bold="true"/>
+
+    <style name="def:type"
+           foreground="#4EC9B0"/>
+
+    <style name="def:function"
+           foreground="#DCDCAA"/>
+
+    <style name="def:variable"
+           foreground="#9CDCFE"/>
+
+    <style name="def:operator"
+           foreground="#D4D4D4"/>
+
+    <style name="def:number"
+           foreground="#B5CEA8"/>
+</style-scheme>
