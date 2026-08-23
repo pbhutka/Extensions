@@ -198,9 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
             );
           }
 
-          if (!spacesMap.has("Home")) {
-            spacesMap.set("Home", { id: "space_home", name: "Home" });
-          }
+          
 
           parsed.boards.forEach((boardData) => {
             const boardPos =
