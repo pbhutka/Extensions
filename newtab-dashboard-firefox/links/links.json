@@ -1,11 +1,11 @@
 {
   "exportType": "lumilist-bookmark-portability",
   "version": 4,
-  "generatedAt": "2026-08-23T12:48:13.460Z",
+  "generatedAt": "2026-08-16T15:47:19.617Z",
   "spaces": [
     {
       "id": "space_home",
-      "name": "Entertainment"
+      "name": "Home"
     },
     {
       "id": "space_mrwh3hpdhgvkj",
@@ -18,14 +18,6 @@
     {
       "id": "space_mrwh3hpdm4u3d",
       "name": "Travel"
-    },
-    {
-      "id": "space_mt3vw3dz4n53b",
-      "name": "AI"
-    },
-    {
-      "id": "space_mt3vxgprxsh6a",
-      "name": "e-Books"
     }
   ],
   "boards": [
@@ -97,9 +89,9 @@
       "id": "b_mrwh3hpe122j3",
       "name": "",
       "position": 0,
-      "column": 0,
-      "spaceId": "space_mt3vxgprxsh6a",
-      "spaceName": "e-Books",
+      "column": 1,
+      "spaceId": "space_home",
+      "spaceName": "Home",
       "bookmarks": [
         {
           "id": "l_mrwh3hpep8uzv",
@@ -121,7 +113,7 @@
       "position": 0,
       "column": 0,
       "spaceId": "space_home",
-      "spaceName": "Entertainment",
+      "spaceName": "Home",
       "bookmarks": [
         {
           "id": "l_mrwh3hpe150c8",
@@ -218,12 +210,6 @@
           "title": "NetMirror",
           "url": "https://net77.cc/home",
           "position": 15
-        },
-        {
-          "id": "l_mt39lsrs72nr3",
-          "title": "DownloadHub",
-          "url": "https://downloadhub.ac/",
-          "position": 16
         }
       ]
     },
@@ -233,13 +219,43 @@
       "position": 0,
       "column": 2,
       "spaceId": "space_home",
-      "spaceName": "Entertainment",
+      "spaceName": "Home",
       "bookmarks": [
+        {
+          "id": "l_mrwh3hpedyiyn",
+          "title": "Leetcode",
+          "url": "https://leetcode.com/problemset/",
+          "position": 0
+        },
+        {
+          "id": "l_mrwh3hpec62j6",
+          "title": "Codeforces",
+          "url": "https://codeforces.com/",
+          "position": 1
+        },
         {
           "id": "l_mrwh3hpear01u",
           "title": "Codeforces - Problemset",
           "url": "https://codeforces.com/problemset?order=BY_RATING_ASC",
-          "position": 0
+          "position": 2
+        },
+        {
+          "id": "l_mrwh3hpejkvha",
+          "title": "Github",
+          "url": "https://github.com/",
+          "position": 3
+        },
+        {
+          "id": "l_mrwh3hpe069km",
+          "title": "Bamboo",
+          "url": "https://logpose-mu.vercel.app/",
+          "position": 4
+        },
+        {
+          "id": "l_msk2kqx39d0o6",
+          "title": "AllGPT",
+          "url": "https://com",
+          "position": 5
         }
       ]
     },
@@ -292,10 +308,10 @@
     {
       "id": "b_mrwh3hpeacqf7",
       "name": "",
-      "position": 0,
-      "column": 0,
-      "spaceId": "space_mt3vw3dz4n53b",
-      "spaceName": "AI",
+      "position": 1,
+      "column": 1,
+      "spaceId": "space_home",
+      "spaceName": "Home",
       "bookmarks": [
         {
           "id": "l_mrwh3hpe92mwa",
@@ -414,12 +430,6 @@
           "title": "UI Beats",
           "url": "https://www.uibeats.com/docs/background/sparkling-grid",
           "position": 11
-        },
-        {
-          "id": "l_mrwh3hpe50ywr",
-          "title": "Dashboard Icons",
-          "url": "https://dashboardicons.com/icons",
-          "position": 12
         }
       ]
     },
@@ -470,12 +480,40 @@
       ]
     },
     {
+      "id": "b_mrwh3hpeos6fc",
+      "name": "",
+      "position": 2,
+      "column": 1,
+      "spaceId": "space_home",
+      "spaceName": "Home",
+      "bookmarks": [
+        {
+          "id": "l_mrwh3hpev6tdv",
+          "title": "Website Lisa",
+          "url": "https://yarrlist.net/movies-and-tv-shows",
+          "position": 0
+        },
+        {
+          "id": "l_mrwh3hpe50ywr",
+          "title": "Dashboard Icons",
+          "url": "https://dashboardicons.com/icons",
+          "position": 1
+        },
+        {
+          "id": "l_mrwh3hpe7stri",
+          "title": "Unstop",
+          "url": "https://unstop.com/competitions/1715333/register/edit",
+          "position": 2
+        }
+      ]
+    },
+    {
       "id": "b_msk2nkty8qns7",
       "name": "",
       "position": 0,
-      "column": 1,
-      "spaceId": "space_mrwh3hpdhgvkj",
-      "spaceName": "UI",
+      "column": 3,
+      "spaceId": "space_home",
+      "spaceName": "Home",
       "bookmarks": [
         {
           "id": "l_msk2nwi8sl174",
@@ -500,28 +538,16 @@
           "title": "PaperMe",
           "url": "https://paperme.pixzens.com/en",
           "position": 3
-        },
-        {
-          "id": "l_mt4dsmi662p5j",
-          "title": "Bootstrap",
-          "url": "https://getbootstrap.com/",
-          "position": 4
-        },
-        {
-          "id": "l_mt4dur6ssb4i3",
-          "title": "Variant",
-          "url": "https://variant.com/",
-          "position": 5
         }
       ]
     },
     {
       "id": "b_msvz971kc4i3m",
       "name": "",
-      "position": 0,
-      "column": 1,
+      "position": 1,
+      "column": 2,
       "spaceId": "space_home",
-      "spaceName": "Entertainment",
+      "spaceName": "Home",
       "bookmarks": [
         {
           "id": "l_mrwh3hpel0wij",
@@ -564,54 +590,6 @@
           "title": "TBCPL",
           "url": "https://tbcpl.lol/#cat-movies",
           "position": 6
-        },
-        {
-          "id": "l_mt39jhmpr52ls",
-          "title": "Vegamovies",
-          "url": "https://vegamovie.se/",
-          "position": 7
-        },
-        {
-          "id": "l_mt39m6wxubxgi",
-          "title": "9xflix",
-          "url": "https://9xflix.ist/",
-          "position": 8
-        },
-        {
-          "id": "l_mt39n123euel9",
-          "title": "Bolly4u",
-          "url": "https://bolly4u.futbol/",
-          "position": 9
-        },
-        {
-          "id": "l_mt39odxzihx0t",
-          "title": "MoviesVerse",
-          "url": "https://hdmovieverse.space/",
-          "position": 10
-        },
-        {
-          "id": "l_mt39pztzf0tfw",
-          "title": "ipagal",
-          "url": "https://ipagal.pokipro.com/",
-          "position": 11
-        },
-        {
-          "id": "l_mt39oqn5spbzy",
-          "title": "BollyFlix",
-          "url": "https://bollyflix.free/",
-          "position": 12
-        },
-        {
-          "id": "l_mt39q8bc03em6",
-          "title": "FilmyFly",
-          "url": "https://filmyfly.farm/",
-          "position": 13
-        },
-        {
-          "id": "l_mrwh3hpev6tdv",
-          "title": "Website Lisa",
-          "url": "https://yarrlist.net/movies-and-tv-shows",
-          "position": 14
         }
       ]
     }

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "New Tab Dashboard",
+  "version": "1.0.0",
+  "description": "A custom new tab dashboard with spaces and link boards.",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "newtab-dashboard@example.com",
+      "strict_min_version": "109.0"
+    }
+  },
+
+  "permissions": ["storage"],
+
+  "chrome_url_overrides": {
+    "newtab": "html/layout.html"
+  }
+}
