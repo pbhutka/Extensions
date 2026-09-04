@@ -809,7 +809,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       if (!ok) return;
     }
-    links.forEach((l) => window.open(l.url, "_blank"));
+    links.forEach((l) => window.open(l.url, "_self"));
   }
 
   function getFaviconUrl(pageUrl) {
@@ -1033,7 +1033,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const itemRow = document.createElement("a");
     itemRow.className = "link-item";
     itemRow.href = link.url;
-    itemRow.target = "_blank";
+    itemRow.target = "_self";
     itemRow.rel = "noopener noreferrer";
     itemRow.draggable = true;
     itemRow.dataset.linkId = link.id;
@@ -1070,7 +1070,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showContextMenu(e.clientX, e.clientY, [
         {
           label: "↗️ Open in new tab",
-          action: () => window.open(link.url, "_blank"),
+          action: () => window.open(link.url, "_self"),
         },
         {
           label: "📋 Copy link",
