@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeetBoost</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/popup.css" />
+  </head>
+  <body>
+    <div class="App">
+      <div class="content">
+        <div class="rank-spine"></div>
+
+        <header class="term-header">
+          <div class="term-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="term-path"><b>~/leetcode-snippets</b>.list</div>
+        </header>
+
+        <main class="container">
+          <div id="header">
+            <img
+              src="../icons/image32.png"
+              alt="LeetBoost Icon"
+              onerror="this.style.display = 'none'"
+            />
+            <h1>LeetBoost</h1>
+          </div>
+
+          <div id="main-view">
+            <div id="snippet-header">
+              <h2>Snippets</h2>
+              <button id="add-btn" title="Add Snippet" aria-label="Add Snippet">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+
+            <div id="snippet-container">
+              <div class="snippet-card">
+                <div class="snippet-top">
+                  <span class="trigger">pb</span>
+                  <div class="actions">
+                    <button class="edit-btn" title="Edit snippet">
+                      <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="del-btn" title="Delete snippet">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </div>
+                </div>
+                <pre class="snippet-body"><code>push_back($1);</code></pre>
+              </div>
+            </div>
+
+            <div id="toggle-active">
+              <label class="toggle-label">
+                <span>AutoCorrect</span>
+                <input type="checkbox" id="active-switch" checked />
+              </label>
+            </div>
+          </div>
+
+          <div id="editor-view" class="hidden">
+            <h2 id="editor-title">Add Snippet</h2>
+            <div id="error"></div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="trigger-input"
+                placeholder="Enter trigger word (e.g., pb)"
+              />
+            </div>
+
+            <div class="textarea-group">
+              <textarea
+                id="snippet-input"
+                rows="7"
+                placeholder="Enter code snippet. Use $1, $2 for tab stops."
+              ></textarea>
+            </div>
+
+            <div class="editor-buttons">
+              <button id="save-btn" class="btn btn-white">
+                <i class="fa-solid fa-check"></i> Save
+              </button>
+              <button id="discard-btn" class="btn btn-outline">
+                <i class="fa-solid fa-xmark"></i> Discard
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="../scripts/popup.js"></script>
+  </body>
+</html>

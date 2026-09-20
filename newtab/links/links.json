@@ -1,0 +1,631 @@
+{
+  "exportType": "lumilist-bookmark-portability",
+  "version": 4,
+  "generatedAt": "2026-09-08T20:00:47.234Z",
+  "spaces": [
+    {
+      "id": "space_home",
+      "name": "Entertainment"
+    },
+    {
+      "id": "space_mrwh3hpdhgvkj",
+      "name": "UI"
+    },
+    {
+      "id": "space_mrwh3hpdld2y7",
+      "name": "Anime-Manga"
+    },
+    {
+      "id": "space_mrwh3hpdm4u3d",
+      "name": "Travel"
+    },
+    {
+      "id": "space_mt3vw3dz4n53b",
+      "name": "AI"
+    },
+    {
+      "id": "space_mt3vxgprxsh6a",
+      "name": "e-Books"
+    }
+  ],
+  "boards": [
+    {
+      "id": "b_mrwh3hpew0irv",
+      "name": "",
+      "position": 0,
+      "column": 0,
+      "spaceId": "space_mrwh3hpdld2y7",
+      "spaceName": "Anime-Manga",
+      "bookmarks": [
+        {
+          "id": "l_mrwh3hpeg2mse",
+          "title": "Anime Nexus",
+          "url": "https://anime.nexus/",
+          "position": 0
+        },
+        {
+          "id": "l_mrwh3hpem1a4s",
+          "title": "AnimeX",
+          "url": "https://animex.one/home",
+          "position": 1
+        },
+        {
+          "id": "l_mrwh3hpe6iw83",
+          "title": "Animetsu",
+          "url": "https://animetsu.bz/",
+          "position": 2
+        },
+        {
+          "id": "l_mrwh3hpenmsbf",
+          "title": "Anify",
+          "url": "https://anify.to/",
+          "position": 3
+        },
+        {
+          "id": "l_mrwh3hpe238t7",
+          "title": "Anitaku",
+          "url": "https://anitaku.io/browse/",
+          "position": 4
+        },
+        {
+          "id": "l_mrwh3hpekttca",
+          "title": "Miruro",
+          "url": "https://www.miruro.to/",
+          "position": 5
+        },
+        {
+          "id": "l_mrwh3hpelnveq",
+          "title": "Anizone",
+          "url": "https://anizone.to/",
+          "position": 6
+        },
+        {
+          "id": "l_mrwh3hpet4d4v",
+          "title": "AnimeSuge",
+          "url": "https://anisuge.tv/home",
+          "position": 7
+        },
+        {
+          "id": "l_mrwh3hpe3e3pa",
+          "title": "JustAnime",
+          "url": "https://justanime.to/",
+          "position": 8
+        }
+      ]
+    },
+    {
+      "id": "b_mrwh3hpe122j3",
+      "name": "",
+      "position": 0,
+      "column": 0,
+      "spaceId": "space_mt3vxgprxsh6a",
+      "spaceName": "e-Books",
+      "bookmarks": [
+        {
+          "id": "l_mrwh3hpep8uzv",
+          "title": "Anaa's Archive",
+          "url": "https://annas-archive.gl/",
+          "position": 0
+        },
+        {
+          "id": "l_mrwh3hpebs3a4",
+          "title": "LibGen",
+          "url": "https://libgen.li/",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "id": "b_mrwh3hpehed91",
+      "name": "",
+      "position": 0,
+      "column": 0,
+      "spaceId": "space_home",
+      "spaceName": "Entertainment",
+      "bookmarks": [
+        {
+          "id": "l_mrwh3hpe150c8",
+          "title": "RamoFlix",
+          "url": "https://ramoflix.net/",
+          "position": 0
+        },
+        {
+          "id": "l_mrwh3hpe7a6vg",
+          "title": "Flixer",
+          "url": "https://flixer.su/",
+          "position": 1
+        },
+        {
+          "id": "l_mrwh3hpelaqok",
+          "title": "Aether",
+          "url": "https://aether.bar/",
+          "position": 2
+        },
+        {
+          "id": "l_mrwh3hpee5h9a",
+          "title": "Cinema",
+          "url": "https://cinema.bz/",
+          "position": 3
+        },
+        {
+          "id": "l_mrwh3hpeu14zf",
+          "title": "67Movies",
+          "url": "https://67movies.net/",
+          "position": 4
+        },
+        {
+          "id": "l_mrwh3hperjr5a",
+          "title": "HDHub4u",
+          "url": "https://new3.hdhub4u.cl/?utm=mn1",
+          "position": 5
+        },
+        {
+          "id": "l_mrwh3hpef2m4y",
+          "title": "hdtoday",
+          "url": "https://hdtoday.tr/",
+          "position": 6
+        },
+        {
+          "id": "l_mrwh3hpemj3ma",
+          "title": "Shuttle TV",
+          "url": "https://shuttletv.su/",
+          "position": 7
+        },
+        {
+          "id": "l_mrwh3hpe81bxg",
+          "title": "WMovies",
+          "url": "https://wmovies.icu/movies",
+          "position": 8
+        },
+        {
+          "id": "l_mrwh3hpe612re",
+          "title": "M4uhd",
+          "url": "https://m4uhd.vip/home",
+          "position": 9
+        },
+        {
+          "id": "l_mrwh3hpelre0e",
+          "title": "Stream Vaults",
+          "url": "https://streamvaults.ru/",
+          "position": 10
+        },
+        {
+          "id": "l_mrwh3hpex5e87",
+          "title": "Proton Movies",
+          "url": "https://protonmovies.com/",
+          "position": 11
+        },
+        {
+          "id": "l_mrwh3hpes7cju",
+          "title": "Cineby",
+          "url": "https://www.cineby.at/",
+          "position": 12
+        },
+        {
+          "id": "l_mrwh3hper9bcq",
+          "title": "Rido Movies",
+          "url": "https://ridomovies.is/home-rd1",
+          "position": 13
+        },
+        {
+          "id": "l_mrwh3hpeb72ne",
+          "title": "Series2Watch",
+          "url": "https://livezy.click/series2watch/",
+          "position": 14
+        },
+        {
+          "id": "l_mrwh3hpe03wdr",
+          "title": "NetMirror",
+          "url": "https://net77.cc/home",
+          "position": 15
+        },
+        {
+          "id": "l_mt39lsrs72nr3",
+          "title": "DownloadHub",
+          "url": "https://downloadhub.ac/",
+          "position": 16
+        }
+      ]
+    },
+    {
+      "id": "b_mrwh3hpeth59h",
+      "name": "",
+      "position": 0,
+      "column": 2,
+      "spaceId": "space_home",
+      "spaceName": "Entertainment",
+      "bookmarks": [
+        {
+          "id": "l_mrwh3hpear01u",
+          "title": "Codeforces - Problemset",
+          "url": "https://codeforces.com/problemset?order=BY_RATING_ASC",
+          "position": 0
+        }
+      ]
+    },
+    {
+      "id": "b_mrwh3hpe7mnn0",
+      "name": "",
+      "position": 0,
+      "column": 1,
+      "spaceId": "space_mrwh3hpdld2y7",
+      "spaceName": "Anime-Manga",
+      "bookmarks": [
+        {
+          "id": "l_mrwh3hpedqvt3",
+          "title": "MangaHaven",
+          "url": "https://mangahaven.net/",
+          "position": 0
+        },
+        {
+          "id": "l_mrwh3hpeqdndb",
+          "title": "Web Central",
+          "url": "https://weebcentral.com/",
+          "position": 1
+        },
+        {
+          "id": "l_mrwh3hpevzldy",
+          "title": "All Manga",
+          "url": "https://allmanga.to/manga",
+          "position": 2
+        },
+        {
+          "id": "l_mrwh3hpe6tt4c",
+          "title": "Comix",
+          "url": "https://comix.to/",
+          "position": 3
+        },
+        {
+          "id": "l_mrwh3hpei6ktm",
+          "title": "MangaFire",
+          "url": "https://mangafire.to/home",
+          "position": 4
+        },
+        {
+          "id": "l_mrwh3hpe3hfkp",
+          "title": "MangaTaro",
+          "url": "https://mangataro.org/home",
+          "position": 5
+        }
+      ]
+    },
+    {
+      "id": "b_mrwh3hpeacqf7",
+      "name": "",
+      "position": 0,
+      "column": 0,
+      "spaceId": "space_mt3vw3dz4n53b",
+      "spaceName": "AI",
+      "bookmarks": [
+        {
+          "id": "l_mrwh3hpe92mwa",
+          "title": "Gemini",
+          "url": "https://gemini.google.com/",
+          "position": 0
+        },
+        {
+          "id": "l_mrwh3hpe4e205",
+          "title": "Claude",
+          "url": "https://claude.ai/new",
+          "position": 1
+        },
+        {
+          "id": "l_mrwh3hpeol3je",
+          "title": "Perplexity",
+          "url": "https://www.perplexity.ai/",
+          "position": 2
+        },
+        {
+          "id": "l_mrwh3hpe75j8e",
+          "title": "Blackbox",
+          "url": "https://www.blackbox.ai/",
+          "position": 3
+        },
+        {
+          "id": "l_mrwh3hpeniru2",
+          "title": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "position": 4
+        },
+        {
+          "id": "l_mrwh3hpevl2nj",
+          "title": "Gamma",
+          "url": "https://gamma.app/",
+          "position": 5
+        }
+      ]
+    },
+    {
+      "id": "b_mrwh3hpetgln6",
+      "name": "",
+      "position": 0,
+      "column": 0,
+      "spaceId": "space_mrwh3hpdhgvkj",
+      "spaceName": "UI",
+      "bookmarks": [
+        {
+          "id": "l_mrwh3hpe8k9kh",
+          "title": "Flat UI",
+          "url": "https://flatuicolors.com",
+          "position": 0
+        },
+        {
+          "id": "l_mrwh3hpe18ami",
+          "title": "Collect UI",
+          "url": "https://collectui.com/designs",
+          "position": 1
+        },
+        {
+          "id": "l_mrwh3hpebuyqq",
+          "title": "Shade CN",
+          "url": "https://ui.shadcn.com/",
+          "position": 2
+        },
+        {
+          "id": "l_mrwh3hpe56muf",
+          "title": "Material UI",
+          "url": "https://mui.com/material-ui/all-components/",
+          "position": 3
+        },
+        {
+          "id": "l_mrwh3hpezdofa",
+          "title": "Ant UI",
+          "url": "https://ant.design/components/overview/",
+          "position": 4
+        },
+        {
+          "id": "l_mrwh3hpez1xb6",
+          "title": "Motion UI",
+          "url": "https://motion.dev/docs?platform=react",
+          "position": 5
+        },
+        {
+          "id": "l_mrwh3hpenv6cc",
+          "title": "Color Hunt",
+          "url": "https://colorhunt.co/",
+          "position": 6
+        },
+        {
+          "id": "l_mrwh3hpep0l2t",
+          "title": "Design Prompt",
+          "url": "https://www.designprompts.dev/",
+          "position": 7
+        },
+        {
+          "id": "l_mrwh3hpe9eeu6",
+          "title": "React Bits",
+          "url": "https://reactbits.dev/get-started/index",
+          "position": 8
+        },
+        {
+          "id": "l_mrwh3hpemjrel",
+          "title": "Chakra Ui",
+          "url": "https://chakra-ui.com/",
+          "position": 9
+        },
+        {
+          "id": "l_mrwh3hper6it9",
+          "title": "Three.js",
+          "url": "https://threejs.org/",
+          "position": 10
+        },
+        {
+          "id": "l_mrwh3hpe0q6ui",
+          "title": "UI Beats",
+          "url": "https://www.uibeats.com/docs/background/sparkling-grid",
+          "position": 11
+        },
+        {
+          "id": "l_mrwh3hpe50ywr",
+          "title": "Dashboard Icons",
+          "url": "https://dashboardicons.com/icons",
+          "position": 12
+        }
+      ]
+    },
+    {
+      "id": "b_mrwh3hpefas0l",
+      "name": "",
+      "position": 0,
+      "column": 0,
+      "spaceId": "space_mrwh3hpdm4u3d",
+      "spaceName": "Travel",
+      "bookmarks": [
+        {
+          "id": "l_mrwh3hpe28yq1",
+          "title": "Sky Scanner",
+          "url": "https://www.skyscanner.net",
+          "position": 0
+        },
+        {
+          "id": "l_mrwh3hpe3ezal",
+          "title": "Indigo",
+          "url": "https://goindigo.in",
+          "position": 1
+        },
+        {
+          "id": "l_mrwh3hpej1ht8",
+          "title": "Goibibo",
+          "url": "https://www.goibibo.com/",
+          "position": 2
+        },
+        {
+          "id": "l_mrwh3hpe4ti8o",
+          "title": "MakeMyTrip",
+          "url": "https://www.makemytrip.com/",
+          "position": 3
+        },
+        {
+          "id": "l_mrwh3hpe70zg3",
+          "title": "IRCTC",
+          "url": "https://www.irctc.co.in/nget/train-search",
+          "position": 4
+        },
+        {
+          "id": "l_mrwh3hpeb01yt",
+          "title": "GSRTC",
+          "url": "https://gsrtc.in/site/",
+          "position": 5
+        }
+      ]
+    },
+    {
+      "id": "b_msk2nkty8qns7",
+      "name": "",
+      "position": 0,
+      "column": 1,
+      "spaceId": "space_mrwh3hpdhgvkj",
+      "spaceName": "UI",
+      "bookmarks": [
+        {
+          "id": "l_msk2nwi8sl174",
+          "title": "Iconify Design",
+          "url": "https://iconify.design/",
+          "position": 0
+        },
+        {
+          "id": "l_msk2o5i1rkbb0",
+          "title": "undraw.co",
+          "url": "https://undraw.co",
+          "position": 1
+        },
+        {
+          "id": "l_msk2ogg1qjxad",
+          "title": "Many Pixels",
+          "url": "https://iconify.design/",
+          "position": 2
+        },
+        {
+          "id": "l_msvzabiv4bnhw",
+          "title": "PaperMe",
+          "url": "https://paperme.pixzens.com/en",
+          "position": 3
+        },
+        {
+          "id": "l_mt4dsmi662p5j",
+          "title": "Bootstrap",
+          "url": "https://getbootstrap.com/",
+          "position": 4
+        },
+        {
+          "id": "l_mt4dur6ssb4i3",
+          "title": "Variant",
+          "url": "https://variant.com/",
+          "position": 5
+        },
+        {
+          "id": "l_mtt346vw7cvg5",
+          "title": "Reicon",
+          "url": "https://reicon.dev/",
+          "position": 6
+        }
+      ]
+    },
+    {
+      "id": "b_msvz971kc4i3m",
+      "name": "",
+      "position": 0,
+      "column": 1,
+      "spaceId": "space_home",
+      "spaceName": "Entertainment",
+      "bookmarks": [
+        {
+          "id": "l_mrwh3hpel0wij",
+          "title": "Moviebox",
+          "url": "https://moviebox.ph/",
+          "position": 0
+        },
+        {
+          "id": "l_msk2be1khe2ul",
+          "title": "CineHD",
+          "url": "https://cine4k.online/",
+          "position": 1
+        },
+        {
+          "id": "l_msk2e51iqb2wn",
+          "title": "PrimeShows",
+          "url": "https://primeshows.org/",
+          "position": 2
+        },
+        {
+          "id": "l_msk2f1frgt7w9",
+          "title": "Sonix Hub",
+          "url": "https://sonixhub.net/",
+          "position": 3
+        },
+        {
+          "id": "l_msk2fqr03rx6b",
+          "title": "YouShows",
+          "url": "https://youshows.org/",
+          "position": 4
+        },
+        {
+          "id": "l_msk2gkjjntj9l",
+          "title": "ArrowTV",
+          "url": "https://youshows.org/",
+          "position": 5
+        },
+        {
+          "id": "l_msk2i4nri13hh",
+          "title": "TBCPL",
+          "url": "https://tbcpl.lol/#cat-movies",
+          "position": 6
+        },
+        {
+          "id": "l_mt39jhmpr52ls",
+          "title": "Vegamovies",
+          "url": "https://vegamovie.se/",
+          "position": 7
+        },
+        {
+          "id": "l_mt39m6wxubxgi",
+          "title": "9xflix",
+          "url": "https://9xflix.ist/",
+          "position": 8
+        },
+        {
+          "id": "l_mt39n123euel9",
+          "title": "Bolly4u",
+          "url": "https://bolly4u.futbol/",
+          "position": 9
+        },
+        {
+          "id": "l_mt39odxzihx0t",
+          "title": "MoviesVerse",
+          "url": "https://hdmovieverse.space/",
+          "position": 10
+        },
+        {
+          "id": "l_mt39pztzf0tfw",
+          "title": "ipagal",
+          "url": "https://ipagal.pokipro.com/",
+          "position": 11
+        },
+        {
+          "id": "l_mt39oqn5spbzy",
+          "title": "BollyFlix",
+          "url": "https://bollyflix.free/",
+          "position": 12
+        },
+        {
+          "id": "l_mt39q8bc03em6",
+          "title": "FilmyFly",
+          "url": "https://filmyfly.farm/",
+          "position": 13
+        },
+        {
+          "id": "l_mrwh3hpev6tdv",
+          "title": "Website Lisa",
+          "url": "https://yarrlist.net/movies-and-tv-shows",
+          "position": 14
+        },
+        {
+          "id": "l_mtpkot6cikw3i",
+          "title": "FreeMediaheckYeah",
+          "url": "https://fmhy.net/f",
+          "position": 15
+        }
+      ]
+    }
+  ]
+}

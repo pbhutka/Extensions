@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>New Tab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Top Navigation -->
+    <header class="navbar">
+      <div class="nav-left" id="space-tabs">
+        <button id="add-space-btn" class="nav-btn-plus" title="New space">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+
+
+      <div class="nav-right">
+        <div class="clock-widget" id="clock-widget">
+          <span id="clock-greeting"></span>
+          <span id="clock-time"></span>
+        </div>
+
+        <button id="settings-btn" class="nav-icon-btn" title="Settings">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Dashboard -->
+    <main id="dashboard-grid" class="dashboard-grid"></main>
+
+    <div id="empty-state" class="empty-state hidden">
+      <p class="empty-title">Nothing here yet</p>
+      <p class="empty-sub">Create an inline container below to get started.</p>
+    </div>
+
+    <!-- Space Pop-up Modal -->
+    <div id="space-modal-overlay" class="modal-hidden">
+      <div class="modal-content">
+        <h2 id="space-modal-title">New Space</h2>
+        <form id="space-form" onsubmit="event.preventDefault()">
+          <label class="field-label" for="space-name-input">Space Name</label>
+          <input
+            type="text"
+            id="space-name-input"
+            placeholder="e.g. Work, Personal"
+            required
+          />
+          <div class="modal-actions">
+            <button type="button" id="close-space-modal" class="btn-secondary">
+              Cancel
+            </button>
+            <button type="submit" id="save-space-btn" class="btn-primary">
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Confirm Dialog Modal -->
+    <div id="confirm-modal-overlay" class="modal-hidden">
+      <div class="modal-content confirm-modal">
+        <h2 id="confirm-modal-title">Please confirm</h2>
+        <p id="confirm-modal-message" class="confirm-message"></p>
+        <div class="modal-actions">
+          <button type="button" id="confirm-cancel-btn" class="btn-secondary">
+            Cancel
+          </button>
+          <button type="button" id="confirm-ok-btn" class="btn-danger">
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Link Modal -->
+    <div id="modal-overlay" class="modal-hidden">
+      <div class="modal-content">
+        <h2 id="modal-title">Edit Link</h2>
+        <form id="content-form">
+          <div id="link-fields">
+            <label class="field-label" for="link-title">Name</label>
+            <input
+              type="text"
+              id="link-title"
+              placeholder="e.g. YouTube"
+              required
+            />
+
+            <label class="field-label" for="link-url">URL</label>
+            <input
+              type="url"
+              id="link-url"
+              placeholder="https://..."
+              required
+            />
+
+          </div>
+
+          <div class="modal-actions">
+            <button
+              type="button"
+              id="delete-item-btn"
+              class="btn-danger hidden"
+            >
+              Delete
+            </button>
+            <button type="button" id="close-modal" class="btn-secondary">
+              Cancel
+            </button>
+            <button type="submit" class="btn-primary">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Settings Overlay -->
+    <div id="settings-overlay" class="modal-hidden">
+      <div class="modal-content settings-modal-override">
+        <form id="settings-form" onsubmit="event.preventDefault()">
+          <div class="settings-compact-wrap">
+            <!-- Background Settings -->
+            <div class="settings-section">
+              <label class="field-label" for="bg-type-select">Background</label>
+              <select id="bg-type-select">
+                <option value="default">Default</option>
+                <option value="solid">Solid color</option>
+                <option value="gradient">CSS gradient</option>
+                <option value="image">Image URL</option>
+              </select>
+
+              <input
+                type="text"
+                id="bg-value-input"
+                class="hidden"
+                placeholder="e.g. #101418 or linear-gradient(...) or https://..."
+              />
+            </div>
+
+            <!-- Backup Controls -->
+            <div class="settings-section">
+              <label class="field-label">Backup</label>
+              <div class="settings-row">
+                <button type="button" id="export-btn" class="btn-secondary">
+                  Export data
+                </button>
+                <button type="button" id="import-btn" class="btn-secondary">
+                  Import data
+                </button>
+                <input
+                  type="file"
+                  id="import-file-input"
+                  class="hidden"
+                  accept="application/json"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" id="close-settings" class="btn-primary">
+              Done
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Context Menu -->
+    <ul id="context-menu" class="context-menu hidden"></ul>
+
+    <script src="/scripts/content.js"></script>
+  </body>
+</html>
