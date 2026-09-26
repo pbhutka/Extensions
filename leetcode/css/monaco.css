@@ -12,7 +12,7 @@ html.dark .monaco-editor .view-lines {
   color: #abb2bf !important;
 
   font-family: "SF Mono", "Geist Mono", monospace !important;
-  font-weight: normal !important;
+  font-weight: 550 !important;
   line-height: 12px !important;
   letter-spacing: 0.15px !important;
 
