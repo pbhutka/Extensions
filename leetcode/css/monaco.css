@@ -6,14 +6,13 @@ html.dark .monaco-editor .margin {
 html.dark .monaco-editor {
   -webkit-font-smoothing: antialiased !important;
   text-rendering: optimizeLegibility !important;
-
 }
 
 html.dark .monaco-editor .view-lines {
   color: #abb2bf !important;
 
-  font-family: "Geist Mono", monospace !important;
-  font-weight: normal !important;
+  font-family: "SF Mono", "Geist Mono", monospace !important;
+  font-weight: 550 !important;
   line-height: 12px !important;
   letter-spacing: 0.15px !important;
 
@@ -76,7 +75,7 @@ html.dark .monaco-editor .mtk7 {
 }
 
 html.dark .monaco-editor .mtk8 {
-  color: #97D879 !important;
+  color: #97d879 !important;
 }
 
 html.dark .monaco-editor .mtk9 {
@@ -88,7 +87,7 @@ html.dark .monaco-editor .mtk10 {
 }
 
 html.dark .monaco-editor .mtk11 {
-  color: #61AFEF !important;
+  color: #61afef !important;
 }
 
 html.dark .monaco-editor .mtk12 {
