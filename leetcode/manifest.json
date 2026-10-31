@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "LeetCode-14ALL",
-  "version": "1.0.0",
+  "name": "Leetcode",
+  "version": "6.7",
   "description": "pbhutka",
   "icons": {
     "16": "icons/image16.png",
