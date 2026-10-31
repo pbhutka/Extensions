@@ -59,7 +59,8 @@ html.dark .monaco-editor .mtk14 {
 
 html.dark .monaco-editor .mtk3 {
   color: #5c6370 !important;
-  font-family: "Bricolage Grotesque", "Geist Mono", monospace !important;
+  font-family: "SF Mono", monospace !important;
+  /* font-style: italic !important; */
 }
 
 html.dark .monaco-editor .mtk5 {
